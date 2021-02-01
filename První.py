@@ -1,8 +1,11 @@
 import pygame
 pygame.init()
 
-velikost = (800, 600)
-pygame.display.set_mode(velikost)
+velikost: tuple[int, int] = (800, 600)
+screen = pygame.display.set_mode(velikost)
+
+pygame.draw.rect(screen, 'white', (100, 100, 50, 50))
+pygame.display.flip()
 
 run = True
 while run:
