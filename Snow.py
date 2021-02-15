@@ -13,10 +13,9 @@ background = (18, 20, 70)
 clock = pygame.time.Clock()
 positions = [
     (100, -10),
-    (200, -10)
+    (200, -10),
+    (300, -10)
 ]
-pygame.draw.circle(screen, color, position, radius)
-pygame.display.flip()
 
 run = True
 while run:
