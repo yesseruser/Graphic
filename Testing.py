@@ -1,6 +1,5 @@
 # coding = UTF-8
 import pygame
-
 pygame.init()
 
 size: tuple[int, int] = (800, 600)
