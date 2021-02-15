@@ -3,8 +3,8 @@ import pygame
 
 pygame.init()
 
-velikost: tuple[int, int] = (800, 600)
-screen = pygame.display.set_mode(velikost)
+size: tuple[int, int] = (800, 600)
+screen = pygame.display.set_mode(size)
 
 pygame.draw.rect(screen, 'white', (100, 100, 50, 50))
 pygame.draw.circle(screen, "green", (200, 150), 50)
