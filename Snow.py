@@ -11,7 +11,10 @@ radius: int = 20
 background = (18, 20, 70)
 
 clock = pygame.time.Clock()
-
+positions = [
+    (100, -10),
+    (200, -10)
+]
 pygame.draw.circle(screen, color, position, radius)
 pygame.display.flip()
 
@@ -20,13 +23,13 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
-    x, y = position
-    position = (x + 2, y + 2)
+    for index in range(len(positions)):
+        x, y = positions[index]
+        positions[index] = (x + 2, y + 2)
 
     screen.fill(background)
-
-    pygame.draw.circle(screen, color, position, radius)
-    pygame.display.flip()
+    for index in range(len(positions)):
+        pygame.draw.circle(screen, color, positions[index], radius)
+        pygame.display.flip()
 
     clock.tick(60)
